@@ -1,0 +1,5 @@
+The parts folder is almost the same as UIs folder. It contains a reusable components that used in the pages.
+
+The difference is that components in parts folder reflect parts of a page, like footer, sidebar, and header, while the UIss folder contains standalone UI components like button, form, or input field.
+
+Sometime, A component in parts can use some components from the UIs folder.
