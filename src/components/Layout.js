@@ -1,9 +1,9 @@
-import Navbar from './parts/Navbar';
+import NavigationBar from './parts/NavigationBar';
 
 const Layout = ({ children }) => {
     return (
         <div>
-            <Navbar />
+            <NavigationBar />
             {children}
         </div>
     )
