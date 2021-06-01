@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import '../../assets/css/NavigationBar.css';
 import logo from '../../assets/images/Bohubrihi-Online-Course-Logo-Updated-White.png';
 import {
@@ -8,7 +8,6 @@ import {
     NavbarToggler,
     Nav,
     NavItem,
-    NavLink,
     UncontrolledDropdown,
     DropdownToggle,
     DropdownMenu,
@@ -26,7 +25,6 @@ const NavigationBar = () => {
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="ms-auto mb-2 mb-lg-0" navbar>
-
                         <UncontrolledDropdown nav inNavbar>
                             <DropdownToggle nav caret>
                                 Courses
@@ -34,24 +32,25 @@ const NavigationBar = () => {
                             <DropdownMenu right>
                                 <DropdownItem>
                                     Career Tract Program
-                            </DropdownItem>
+                                </DropdownItem>
                                 <DropdownItem>
                                     Course Category
-                            </DropdownItem>
-
+                                </DropdownItem>
                                 <DropdownItem>
                                     Free Course
-                            </DropdownItem>
-
+                                </DropdownItem>
                                 <DropdownItem divider />
                                 <DropdownItem>
                                     All Courses
-                            </DropdownItem>
+                                </DropdownItem>
                             </DropdownMenu>
                         </UncontrolledDropdown>
 
                         <NavItem>
                             <NavLink exact to="/" activeClassName="yellow" className="nav-link">Corporate e-learning</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink exact to="/dashboard" activeClassName="yellow" className="nav-link">Login to Dashboard</NavLink>
                         </NavItem>
                     </Nav>
                 </Collapse>

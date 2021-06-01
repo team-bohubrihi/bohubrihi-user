@@ -1,0 +1,91 @@
+.root {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 5%;
+    padding: 10px;
+}
+.root > .box {
+    width: 48%;
+    padding: 20px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #eaeaea;
+}
+.box > h2 {
+    font-size: 14px;
+    position: relative;
+    margin: 0 0 20px;
+    padding-bottom: 8px;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 1px solid #ddd;
+}
+.button-group {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.auth-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    text-decoration: none;
+    background-color: #0081EC;
+    color: white;
+    width: 300px;
+    border-radius: 2px;
+    margin: 5px;
+    padding: 10px;
+}
+.auth-btn:hover {
+    background-color: inherit;
+    color: inherit;
+}
+
+.icon-style {
+    font-size: 22px;
+    margin-left: 20px;
+    margin-right: 30px;
+}
+.btn-title {
+    width: 250px;
+    margin: 0;
+    text-align: center;
+}
+.bold-text {
+    font-weight: 500;
+}
+.separator {
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    color: #72777c;
+    margin: 20px 0 20px;
+    font-weight: bold;
+}
+.separator::before, .separator::after {
+    content: "";
+    flex-grow: 1;
+    background: #ddd;
+    height: 1px;
+    font-size: 0;
+    line-height: 0;
+    margin: 0 8px;
+}
+.required {
+    cursor: pointer;
+}
+.required:after {
+    content: " *";
+    color: red;
+}
+.forgotPassword {
+    text-decoration: none;
+    color: #000;
+}
+.forgotPassword:hover {
+    color: #FCB76F;
+}
