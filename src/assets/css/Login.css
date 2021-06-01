@@ -1,6 +1,6 @@
 .root {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
     margin-top: 5%;
     padding: 10px;
@@ -88,4 +88,52 @@
 }
 .forgotPassword:hover {
     color: #FCB76F;
+}
+@media only screen and (max-width: 959px) {
+    .root {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 5%;
+        padding: 10px;
+    }
+    .root > .box {
+        width: 96%;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-width: 2px;
+        border-style: solid;
+        border-color: #eaeaea;
+    }
+}
+@media only screen and (max-width: 400px) {
+
+    .auth-btn {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        text-decoration: none;
+        background-color: #0081EC;
+        color: white;
+        width: 90%;
+        box-sizing: border-box;
+        overflow: hidden;
+        border-radius: 2px;
+        margin: 5px;
+        padding: 10px;
+    }
+    .btn-title {
+        width: 70%;
+        margin: 0;
+        text-align: center;
+        overflow: hidden;
+        text-overflow: clip;
+        white-space: nowrap;
+    }
+    .submit-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center
+    }
 }
