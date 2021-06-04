@@ -1,11 +1,13 @@
-import Layout from '../Layout';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Courses = () => {
-    return (
-        <Layout>
-            <h1>I am Courses Page!</h1>
-        </Layout>
-    )
+  return (
+    <div>
+      <h2>This is Course Page</h2>
+      <Link to="/course/learn/modern-javascript">Modern JavaScript</Link>
+    </div>
+  )
 }
 
-export default Courses;
+export default Courses
