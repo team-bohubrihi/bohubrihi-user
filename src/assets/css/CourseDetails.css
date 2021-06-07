@@ -1,0 +1,31 @@
+/* Course Details Top Banner CSS */
+.course-details-top-banner {
+    background-color: #0D1B36;
+}
+
+.course-details-top-banner .card, .course-details-top-banner .card-footer {
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+.course-details-top-banner .card-text {
+    font-size: 14px;
+}
+
+/* Course About CSS */
+.course-about .card-text {
+    text-align: justify;
+}
+
+.course-about .border-less {
+    border: none;
+}
+
+.silver-text {
+    color: #8F7A82
+} 
+
+.borderless td, .borderless th {
+    border: none;
+}
