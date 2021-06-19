@@ -12,11 +12,25 @@ import {
     faUniversalAccess,
     faLocationArrow,
     faClock,
-    faDollarSign
+    faDollarSign,
+    faChevronCircleUp,
+    faChevronCircleDown,
+    faCircleNotch,
 } from '@fortawesome/free-solid-svg-icons';
 import "../../assets/css/CourseDetails.css";
+import { useState } from 'react';
 
 const CourseDetails = () => {
+    const [expandAll, setExpandAll] = useState({ text: "Expand All", icon: faChevronCircleDown });
+
+    const handleExpandAll = () => {
+        if (expandAll.icon === faChevronCircleDown) {
+            setExpandAll({ text: "Collapse All", icon: faChevronCircleUp });
+        } else {
+            setExpandAll({ text: "Expand All", icon: faChevronCircleDown });
+        };
+    };
+
     return (
         <Layout>
             {/* Course Details Top Banner */}
@@ -186,7 +200,66 @@ const CourseDetails = () => {
                     </div>
                 </div>
             </section>
-        </Layout>
+
+            {/* Course Content */}
+            <section className="course-content pb-5">
+                <div className="container">
+                    <div className="pb-4 d-flex flex-column flex-sm-column flex-md-row justify-content-between">
+                        <h4 className="text-center">Course Content</h4>
+                        <button onClick={handleExpandAll} className="rounded-pill deep-blue-button">
+                            <FontAwesomeIcon icon={expandAll.icon} className="me-1" /> {expandAll.text}
+                        </button>
+                    </div>
+
+                    {/* Module */}
+                    <div className="pb-3">
+                        <h4>Django Set Up</h4>
+                        <div className="py-4 row row-cols-1 row-cols-md-1 gx-4 gy-3">
+                            {/* Lesson */}
+                            <div className="col">
+                                <div className="card h-100">
+                                    <div className="card-body">
+                                        <h6 className="lesson-title">
+                                            <a href="/">
+                                                <FontAwesomeIcon icon={faCircleNotch} className="me-1 silver" /> Pre-Course Survey
+                                            </a>
+                                        </h6>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Lesson */}
+                            <div className="col">
+                                <div className="card h-100">
+                                    <div className="card-body">
+                                        <h6 className="lesson-title">
+                                            <a href="/">
+                                                <FontAwesomeIcon icon={faCircleNotch} className="me-1 silver" /> Pre-Course Survey
+                                            </a>
+                                        </h6>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Lesson */}
+                            <div className="col">
+                                <div className="card h-100">
+                                    <div className="card-body">
+                                        <h6 className="lesson-title">
+                                            <a href="/">
+                                                <FontAwesomeIcon icon={faCircleNotch} className="me-1 silver" /> Pre-Course Survey
+                                            </a>
+                                        </h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section >
+
+        </Layout >
     )
 }
 

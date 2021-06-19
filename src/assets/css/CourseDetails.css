@@ -24,8 +24,35 @@
 
 .silver-text {
     color: #8F7A82
-} 
+}
+
+.silver {
+    color: rgb(202, 200, 200);
+}
 
 .borderless td, .borderless th {
     border: none;
+}
+
+/* Course Content CSS */
+.course-content .card {
+    border: 2px solid #e2e7ed;
+}
+
+.course-content a {
+    text-decoration: none;
+    color: rgb(62, 62, 62);
+}
+
+.deep-blue-button {
+    background-color: #0D1B36;
+    color: white;
+    border: none;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 10px 35px;
+}
+
+.lesson-title {
+    font-weight: normal;
 }
